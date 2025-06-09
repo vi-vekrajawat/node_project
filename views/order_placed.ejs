@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Successful</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #f0fff4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #38a169;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 3em;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      animation: pop 0.5s ease;
+      z-index: 2;
+    }
+
+    .message {
+      position: absolute;
+      top: 60%;
+      font-size: 24px;
+      color: #2f855a;
+      text-align: center;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Balloons */
+    .balloon {
+      position: absolute;
+      width: 40px;
+      height: 50px;
+      background: red;
+      border-radius: 50% 50% 50% 50%;
+      animation: floatUp 4s ease-in infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
+        bottom: -60px;
+        opacity: 1;
+        transform: translateX(0);
+      }
+      100% {
+        bottom: 100%;
+        opacity: 0;
+        transform: translateX(50px);
+      }
+    }
+
+    .balloon::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      width: 2px;
+      height: 20px;
+      background: black;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="circle">
+    ✓
+  </div>
+  <div class="message">
+    <h2>Order Placed Successfully!</h2>
+    <p>Thank you for ordering with us 🎉</p>
+    <h4><a href="/home">Go Back</a></h4>
+  </div>
+
+  <!-- Balloons -->
+  <% for (let i = 0; i < 150; i++) { %>
+    <div class="balloon" style="
+      left: <%= Math.random() * 100 %>vw;
+      background-color: hsl(<%= Math.random() * 360 %>, 50%, 80%);
+      animation-delay: <%= Math.random() * 3 %>s;
+    ">
+
+  </div>
+  <% } %>
+
+</body>
+</html>
+
+<!-- /*  <h4><a href="/home">Go Back</a></h4> -->

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <%-include("__bootstrap.ejs")%> -->
+    <style>
+        #img-div{
+            /* border: 2px solid red; */
+            width: 50%;
+            box-shadow: 10px 10px 10px grey;
+            /* height: 50px; */
+        }
+        #info-div{
+            box-shadow: 10px 10px 10px grey;
+            /* border: 2px solid green; */
+            width: 50%;
+            padding: 5px;
+        }
+        #mainDiv{
+            margin-left: 5px;
+            margin-right: 5px;
+            display: flex;
+            gap: 50px;
+        }
+        #footer{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <%-include("__navbar.ejs")%>
+    <div id="mainDiv">
+        <div id="img-div">
+            <img src="<%=product.image%>" alt="" height="450px" width="100%">
+        </div>
+        <div id="info-div">
+            <h1><%=product.name%></h1>
+            <!-- <p>Instruction</p> -->
+             <hr style="width:100%; height: 1px;background-color:grey;"/>
+            <p><b>Instructions: <br></b><%=product.instructions%></p>
+            <h5><b>Prepare Time Minutes : </b><%=product.prepTimeMinutes%>min</h5>
+            <p><b>Cook Time Minutes : </b><%=product.cookTimeMinutes%>min</p>
+            <p><b>servings : </b><%=product.servings%></p>
+            <p><b>Calories Per Servings : </b><%=product.caloriesPerServing%></p>
+            <p><b>Review Count :</b><%=product.reviewCount%></p>
+            <p><b>Rating : </b><%=product.rating%>/10</p>
+            <p><b>Price : </b><%=product.price%>Rs.</p>
+          <a href="/buyNow/<%= product.id %>">  <button style="width: 100%; background-color: orange; border-style: none; position: relative; height: 30px; top: 5px; color: white; font-size: 20px;"><b> Buy Now</b></button></a>
+
+        </div>
+
+    </div>
+    <div id="footer"><%-include("__footer.ejs")%>
+</div>
+
+</body>
+</html>
