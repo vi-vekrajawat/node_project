@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Restaurant</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 60px;
+      background-color: white;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #e94e1b;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #e94e1b;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px;
+      height: calc(100vh - 100px);
+    }
+
+    .hero-left {
+      max-width: 50%;
+    }
+
+    .hero-left h1 {
+      font-size: 60px;
+      color: #2b2b2b;
+      margin-bottom: 20px;
+    }
+
+    .hero-left p {
+      font-size: 20px;
+      color: #555;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .hero-left button {
+      padding: 14px 30px;
+      font-size: 16px;
+      background-color: #e94e1b;
+      border: none;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-left button:hover {
+      background-color: #cc3d12;
+    }
+
+    .hero-right img {
+      width: 500px;
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 30px;
+      }
+
+      .hero-left {
+        max-width: 100%;
+      }
+
+      .hero-right {
+        margin-bottom: 30px;
+      }
+
+      .hero-left h1 {
+        font-size: 40px;
+      }
+
+      .hero-left p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">FoodFunday</div>
+    <div class="nav-links">
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Delicious Meals<br>At Your Doorstep</h1>
+      <p>Order your favorite dishes from our extensive menu and get them delivered hot and fresh, right when you want it!</p>
+      <button>Order Now</button>
+    </div>
+    <div class="hero-right">
+      <img src="https://cdn.dribbble.com/userupload/13629605/file/original-9b55a1459c57813567d0087561733c19.jpg?format=webp&resize=800x600" alt="Dish Image" />
+    </div>
+  </section>
+
+</body>
+</html>
